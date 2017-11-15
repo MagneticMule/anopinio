@@ -1,8 +1,8 @@
 # google api credentials
-:client_s.json
+client_s.json
 
 # composer vendor dir
-/vendor
+vendor
 
 # Logs
 logs
