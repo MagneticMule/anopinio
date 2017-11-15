@@ -1,4 +1,5 @@
 <?php
+
 use Google\Spreadsheet\DefaultServiceRequest;
 use Google\Spreadsheet\ServiceRequestFactory;
 require_once __DIR__ . '/vendor/autoload.php';
