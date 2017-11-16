@@ -16,9 +16,18 @@
 
 <body>
     <div class="container">
-        <div id="intro-blurb"></div>
-        <div id="big-text-input" contenteditable="true"></div>
-        <div id=""></div>
+        <div id="intro-blurb">“Thank you for offering to contribute to this exploration of student help-seeking in assignments. You can write anything
+        below and be sure that we have no way of tracking you or your input technology. But what you can contribute may helps both
+        academics and other students have a better understanding of the tensions, challenges and temptations surrounding getting
+        help with an assignment” Please feel able to share any experiences you have had (or observed) around getting such help (this
+        may range from informal advice to purchasing assignments)”</div>
+        <div id="form">
+            <form action="anopinio.php" method="post" name="comment-form">
+                <textarea rows="20" cols="120" id="comment" name="comment"></textarea>
+                <br>
+                <input type="submit" name="submit" value="Send" />
+            </form>
+        </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 </body>

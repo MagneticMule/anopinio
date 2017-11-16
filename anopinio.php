@@ -31,8 +31,14 @@ $spreadsheet = (new Google\Spreadsheet\SpreadsheetService)
 $worksheets = $spreadsheet->getWorksheetFeed()->getEntries();
 $worksheet = $worksheets[0];
 
-// apend our new data to the worksheet
-$testNarrative = "Some cool stuff, etc";
-$testTime = 024343234;
-$listFeed = $worksheet->getListFeed();
-$listFeed->insert(["time" => $testTime, "narrative" => $testNarrative]);
+// append our new data to the worksheet
+$comment = htmlspecialchars($_POST['comment']);
+$currentTime = date('l jS \of F Y h:i:s A');
+if (!empty($comment)){
+    $listFeed = $worksheet->getListFeed();
+    $listFeed->insert(["time" => $currentTime, "narrative" => $comment]);
+    echo "Great Success";
+} else {
+    echo "Nothing to submit.";
+}
+
