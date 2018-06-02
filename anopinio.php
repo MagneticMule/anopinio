@@ -41,4 +41,3 @@ if (!empty($comment)){
 } else {
     echo "Nothing to submit.";
 }
-
