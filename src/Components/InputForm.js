@@ -8,7 +8,7 @@ class InputForm extends Component {
   render() {
     return <div className="form">
         <form action="anopinio.php" method="post" name="comment-form">
-          <textarea rows="20" cols="120" id="comment-box" name="comment" placeholder="Type away. Remember, we won't collect any data about you, only what you write here." />
+          <textarea rows="20" cols="120" id="comment-box" name="comment" placeholder="Type away. Remember, we won't collect any personal data, only what you write here." />
           <input id="submit-btn" class="btn" type="submit" name="submit" value="Send" />
         </form>
       </div>;

@@ -38,6 +38,4 @@ if (!empty($comment)){
     $listFeed = $worksheet->getListFeed();
     $listFeed->insert(["time" => $currentTime, "narrative" => $comment]);
     echo "Great Success";
-} else {
-    echo "Nothing to submit.";
 }
