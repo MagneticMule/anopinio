@@ -2,6 +2,7 @@
 
 use Google\Spreadsheet\DefaultServiceRequest;
 use Google\Spreadsheet\ServiceRequestFactory;
+
 require_once __DIR__ . '/vendor/autoload.php';
 
 
@@ -10,8 +11,10 @@ $client = new Google_Client;
 $client->useApplicationDefaultCredentials();
 
 $client->setApplicationName("anopinio");
-$client->setScopes(['https://www.googleapis.com/auth/drive',
-                        'https://spreadsheets.google.com/feeds']);
+$client->setScopes([
+    'https://www.googleapis.com/auth/drive',
+    'https://spreadsheets.google.com/feeds'
+]);
 
 if ($client->isAccessTokenExpired()) {
     $client->refreshTokenWithAssertion();
@@ -24,8 +27,8 @@ ServiceRequestFactory::setInstance(
 
 // Get our spreadsheet
 $spreadsheet = (new Google\Spreadsheet\SpreadsheetService)
-   ->getSpreadsheetFeed()
-   ->getByTitle('13nvgxt1et589wAnFJl4oPgavGd7ScQM6cmsE9iy11uk');
+    ->getSpreadsheetFeed()
+    ->getByTitle('1fO2X1_O7UY9oLoOHGlZsc883RSkz8lpSz0kUj4F100M');
 
 // Get the first worksheet (tab)
 $worksheets = $spreadsheet->getWorksheetFeed()->getEntries();
@@ -34,8 +37,8 @@ $worksheet = $worksheets[0];
 // append our new data to the worksheet
 $comment = htmlspecialchars($_POST['comment']);
 $currentTime = date('l jS \of F Y h:i:s A');
-if (!empty($comment)){
+if (!empty($comment)) {
     $listFeed = $worksheet->getListFeed();
     $listFeed->insert(["time" => $currentTime, "narrative" => $comment]);
-    echo "Great Success";
+    return 1;
 }
