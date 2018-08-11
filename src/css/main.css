@@ -55,13 +55,16 @@ a:hover {
 }
 
 h1 {
-  font-size: 2em;
-  margin: 1.2em 0 1.42rem;
+  font-weight: 100;
+  font-size: 2.5em;
+  margin: 1.2em 0 1.1rem;
 }
 
 h2 {
   font-size: 1.6em;
-  margin: 1.4em 0 1.22rem;
+  margin: 1.8em 0 .72em;
+  line-height: .7em;
+  padding: 0;
 }
 
 abbr[title] {
@@ -217,10 +220,10 @@ table {
 body {
   background-color: #f7f4f3;
   color: #071013;
-  font-family: Helvetica, "Helvetica Nue", Arial, sans-serif;
+  font-family: Lato, Helvetica, "Helvetica Nue", Arial, sans-serif;
   font-weight: 100;
   font-size: 16px;
-  line-height: 2.4rem;
+  line-height: 1.92em;
 }
 
 .container {
@@ -241,7 +244,7 @@ body {
 }
 
 .intro-text {
-  max-width: 960px;
+  max-width: 720px;
   padding: 1rem;
 }
 

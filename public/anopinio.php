@@ -1,12 +1,12 @@
 <?php
-
+ini_set('display_errors', 1);
 use Google\Spreadsheet\DefaultServiceRequest;
 use Google\Spreadsheet\ServiceRequestFactory;
 
-require_once __DIR__ . '/vendor/autoload.php';
+require_once 'vendor/autoload.php';
 
 
-putenv('GOOGLE_APPLICATION_CREDENTIALS=' . __DIR__ . '/client_s.json');
+putenv('GOOGLE_APPLICATION_CREDENTIALS=' . 'client_s.json');
 $client = new Google_Client;
 $client->useApplicationDefaultCredentials();
 
@@ -28,7 +28,7 @@ ServiceRequestFactory::setInstance(
 // Get our spreadsheet
 $spreadsheet = (new Google\Spreadsheet\SpreadsheetService)
     ->getSpreadsheetFeed()
-    ->getByTitle('1fO2X1_O7UY9oLoOHGlZsc883RSkz8lpSz0kUj4F100M');
+    ->getByTitle('t1000');
 
 // Get the first worksheet (tab)
 $worksheets = $spreadsheet->getWorksheetFeed()->getEntries();
@@ -40,5 +40,7 @@ $currentTime = date('l jS \of F Y h:i:s A');
 if (!empty($comment)) {
     $listFeed = $worksheet->getListFeed();
     $listFeed->insert(["time" => $currentTime, "narrative" => $comment]);
-    return 1;
+} else {
+    $listFeed = $worksheet->getListFeed();
+    $listFeed->insert(["time" => $currentTime, "narrative" => "error"]);
 }

@@ -2,6 +2,7 @@
   "name": "opniotron",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://lsri.info/anopinio",
   "dependencies": {
     "eslint-plugin-prettier": "^2.6.2",
     "prettier": "^1.14.2",

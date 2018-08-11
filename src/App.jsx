@@ -27,10 +27,11 @@ class App extends Component {
                 <div>
                   <h1>What is this research about?</h1>
                   <p>
-                    This research study is part of my MA degree. It seeks to
+                    This study is part of the research I am doing at{" "}
+                    <strong>The University of Nottingham</strong>. It seeks to
                     understand the challenges students experience in completing
                     a substantial piece of coursework. One challenge is
-                    procrastination!There is a natural reluctance to discuss
+                    procrastination! There is a natural reluctance to discuss
                     this openly. Nevertheless, I want to understand how
                     seriously it affects us, what forms it takes, and how we
                     deal with it. If you are able to comment on any or all of
@@ -66,7 +67,7 @@ class App extends Component {
                     </li>
                     <li>
                       <strong>School of Education:</strong> Research Ethics
-                      Coordinator:
+                      Coordinator{" "}
                       <a href="mailto:educationresearchethics@nottingham.ac.uk">
                         educationresearchethics@nottingham.ac.uk
                       </a>
